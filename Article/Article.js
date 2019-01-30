@@ -13,7 +13,14 @@ class Article {
   }
   
   expandArticle(e) {
-    this.domElement.classList.toggle('article-open')
+    if (this.domElement.classList.contains('article-open')) {
+      this.domElement.classList.toggle('article-open')
+      this.expandButton.textContent = "Expand"
+    }
+    else {
+      this.domElement.classList.toggle('article-open')
+      this.expandButton.textContent = "Minimize"
+    } 
   }
 }
 
